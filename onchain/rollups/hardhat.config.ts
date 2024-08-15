@@ -18,6 +18,7 @@ import {
     arbitrumSepolia,
     base,
     baseSepolia,
+    filecoinCalibration,
     mainnet,
     optimism,
     optimismSepolia,
@@ -62,6 +63,7 @@ const config: HardhatUserConfig = {
         arbitrum_sepolia: networkConfig(arbitrumSepolia),
         base: networkConfig(base),
         base_sepolia: networkConfig(baseSepolia),
+        filecoin_calibration: networkConfig(filecoinCalibration),
         mainnet: networkConfig(mainnet),
         sepolia: networkConfig(sepolia),
         optimism: networkConfig(optimism),
@@ -141,6 +143,9 @@ const config: HardhatUserConfig = {
             ],
             base: [ppath("@cartesi/util", "/deployments/base")],
             base_sepolia: [ppath("@cartesi/util", "/deployments/base_sepolia")],
+            filecoinCalibration: [
+                ppath("@cartesi/util", "/deployments/filecoin_calibration"),
+            ],
             mainnet: [ppath("@cartesi/util", "/deployments/mainnet")],
             optimism: [ppath("@cartesi/util", "/deployments/optimism")],
             optimism_sepolia: [

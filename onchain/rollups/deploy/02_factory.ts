@@ -10,7 +10,7 @@ const func: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
 
     // IoTeX doesn't have support yet, see https://github.com/safe-global/safe-singleton-factory/issues/199
     // Chiado is not working, see https://github.com/safe-global/safe-singleton-factory/issues/201
-    const nonDeterministicNetworks = ["iotex_testnet", "chiado"];
+    const nonDeterministicNetworks = ["iotex_testnet", "chiado", "filecoin_calibration"];
     const deterministicDeployment = !nonDeterministicNetworks.includes(
         network.name,
     );
